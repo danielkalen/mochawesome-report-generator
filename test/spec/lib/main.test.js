@@ -290,6 +290,15 @@ describe('lib/main', () => {
       });
     });
 
+    describe('direct call', () => {
+      it('copies assets', () => {
+        const distDir = path.join(__dirname,'..','..','..','lib','dist','assets','external');
+        mareport.copyAssets({reportDir:'test/temp'});
+        expect(copySyncStub.called).to.equal(true);
+        expect(copySyncStub.calledWith(distDir, 'test/temp/assets')).to.equal(true);
+      });
+    });
+
     describe('when css version matches', () => {
       it('does not copy assets', () => {
         readFileSyncStub.returns(pkg.version);
