@@ -1,5 +1,5 @@
 {
-  "name": "mochawesome-report-generator",
+  "name": "@danielkalen/mochawesome-report-generator",
   "version": "2.1.0",
   "description": "Generates gorgeous HTML reports from mochawesome reporter.",
   "scripts": {
@@ -24,7 +24,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/adamgruber/mochawesome-report-generator"
+    "url": "https://github.com/danielkalen/mochawesome-report-generator"
   },
   "keywords": [
     "mochawesome",
