@@ -239,6 +239,15 @@ describe('lib/main', () => {
     });
   });
 
+
+  describe('html', () => {
+    it('returns html report', () => {
+      const result = mareport.html(testData, opts);
+      expect(typeof result).to.equal('string')
+      expect(result).to.include('<!doctype html>');
+    });
+  });
+
   describe('copyAssets', () => {
     beforeEach(() => {
       existsSyncStub.returns(true);
