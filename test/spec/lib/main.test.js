@@ -242,9 +242,25 @@ describe('lib/main', () => {
 
   describe('html', () => {
     it('returns html report', () => {
+      const result = mareport.html(testData);
+      expect(typeof result).to.equal('string')
+      expect(result).to.include('<!doctype html>');
+    });
+    
+    it('does not write assets to disc', () => {
+      outputFileStub.resolves(null);
       const result = mareport.html(testData, opts);
       expect(typeof result).to.equal('string')
       expect(result).to.include('<!doctype html>');
+      expect(outputFileStub.called).to.equal(false);
+    });
+    
+    it('will write assets inline if opts.inlineAssets is set', () => {
+      outputFileStub.resolves(null);
+      const result = mareport.html(testData, {inlineAssets:true});
+      expect(typeof result).to.equal('string')
+      expect(result).to.include('<!doctype html>');
+      expect(outputFileStub.called).to.equal(false);
     });
   });
 
