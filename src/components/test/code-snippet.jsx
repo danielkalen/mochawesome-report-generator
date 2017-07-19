@@ -21,7 +21,7 @@ class CodeSnippet extends Component {
   };
 
   static defaultProps = {
-    lang: 'javascript',
+    lang: 'bash',
     highlight: true,
     showLabel: false
   };

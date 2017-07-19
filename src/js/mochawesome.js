@@ -10,6 +10,7 @@ const config = JSON.parse(bodyEl.getAttribute('data-config'));
 
 // Register hljs languages
 hljs.registerLanguage('javascript', require('highlight.js/lib/languages/javascript'));
+hljs.registerLanguage('bash', require('highlight.js/lib/languages/bash'));
 hljs.registerLanguage('diff', require('highlight.js/lib/languages/diff'));
 
 bodyEl.removeAttribute('data-raw');
