@@ -56,7 +56,7 @@ class CodeSnippet extends Component {
       codeHtml = `${expected}&nbsp;&nbsp;${actual}\n\n${code}`;
     } else if (lang === 'bash') {
       codeHtml = ansi.toHtml(
-        code
+        codeHtml
           .replace(/✔/g, '\u001b[32m✔\u001b[0m')
           .replace(/✖/g, '\u001b[31m✖\u001b[0m')
       );
