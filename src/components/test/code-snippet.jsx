@@ -55,7 +55,11 @@ class CodeSnippet extends Component {
       const actual = `<span class='${cx('code-diff-actual')}'>- actual</span>`;
       codeHtml = `${expected}&nbsp;&nbsp;${actual}\n\n${code}`;
     } else if (lang === 'bash') {
-      codeHtml = ansi.toHtml(code.replace(/✔/g,'\u001b[32m✔\u001b[0m').replace(/✖/g,'\u001b[31m✖\u001b[0m'));
+      codeHtml = ansi.toHtml(
+        code
+          .replace(/✔/g, '\u001b[32m✔\u001b[0m')
+          .replace(/✖/g, '\u001b[31m✖\u001b[0m')
+      );
     }
 
     const cxName = cx(className, lang, { hljs: !highlight });
