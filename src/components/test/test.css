@@ -169,6 +169,8 @@
   margin: 0;
   padding: 14px;
   border-radius: 0;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
 
   & + .code-snippet {
     border-top: 1px solid #fff;
