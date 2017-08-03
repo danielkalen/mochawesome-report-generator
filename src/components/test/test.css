@@ -164,8 +164,10 @@
 
 .code-snippet {
   position: relative;
+  box-sizing: border-box;
   font-size: 11px;
   margin: 0;
+  padding: 14px;
   border-radius: 0;
 
   & + .code-snippet {
